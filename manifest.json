@@ -1,9 +1,9 @@
 {
-  "name": "graphql-example",
+  "name": "graphql-category",
   "vendor": "privarsa",
   "version": "0.0.1",
-  "title": "GraphQL Example",
-  "description": "Reference app for VTEX IO GraphQL Services",
+  "title": "Category Service GraphQL",
+  "description": "Sericio de categorias con GraphQL",
   "mustUpdateAt": "2022-01-04",
   "categories": [],
   "dependencies": {},
@@ -20,21 +20,16 @@
     {
       "name": "outbound-access",
       "attrs": {
-        "host": "api.vtex.com",
-        "path": "/api/*"
+        "host": "privarsa.net",
+        "path": "/apivtex/api/*"
       }
     },
     {
-      "name": "POWER_USER_DS"
-    },
-    {
-      "name": "ADMIN_DS"
-    },
-    {
-      "name": "ADMIN_CRM"
-    },
-    {
-      "name": "POWER_USER_CRM"
+      "name": "outbound-access",
+      "attrs": {
+        "host": "portal.vtexcommercestable.com.br",
+        "path": "/api/catalog_system/pub/*"
+      }
     },
     {
       "name": "colossus-fire-event"

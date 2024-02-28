@@ -2,7 +2,7 @@ import type { ParamsContext, RecorderState, ServiceContext } from '@vtex/api'
 import { Service } from '@vtex/api'
 
 import { Clients } from './clients'
-import { createFacturacion, getFacturation } from './resolvers/facturacion'
+import { getCategory } from './resolvers/category'
 
 
 const MEDIUM_TIMEOUT_MS = 5 * 1000
@@ -25,14 +25,11 @@ export default new Service<Clients, RecorderState, ParamsContext>({
   graphql: {
     resolvers: {
       Mutation: {
-        createFacturacion,
       },
       Query: {
-        getFacturation,
+        getCategory,
       },
     },
   },
-
-
 
 })

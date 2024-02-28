@@ -1,0 +1,3 @@
+interface Args {
+    level: string;
+}
