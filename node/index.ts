@@ -24,8 +24,6 @@ export default new Service<Clients, RecorderState, ParamsContext>({
   },
   graphql: {
     resolvers: {
-      Mutation: {
-      },
       Query: {
         getCategory,
       },
