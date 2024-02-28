@@ -1,0 +1,31 @@
+# To really understand GraphQL, go to https://graphql.org/learn/
+
+type Facturacion {
+  usoCFDI: String
+  rfc: String
+  email: String
+  orgid: String
+}
+
+type CreateReponse{
+  Id: String
+  Href: String
+  DocumentId: String
+}
+
+type Query{
+  getFacturation(
+    orgid: String = ""
+    page: Int = 1
+    pageSize: Int = 10
+  ): [Facturacion] @cacheControl(scope: PUBLIC, maxAge: SHORT)
+}
+
+type Mutation{
+  createFacturacion(
+    usoCFDI: String
+    rfc: String
+    email: String
+    orgid: String
+  ):CreateReponse
+}
